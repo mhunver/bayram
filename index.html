@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayram Mesajı</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+        }
+        img {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #d81b60;
+            font-weight: bold;
+        }
+        #şeker{
+            margin: 20px;
+        }
+
+        #normal-şeker{
+            position: relative;
+            bottom: 50px;
+        }
+
+        .wrong-message{
+            display: none;
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #d81b60;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            img {
+                width: 150px;
+            }
+            .message {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h2> Doğru Şekeri seçin</h2>
+        <img src="./images/1743287844873.jpg" alt="Bayram Şekeri" id="şeker">
+        
+        <img id="normal-şeker" style="border-radius: 100px;" src="https://st2.depositphotos.com/4173781/7911/i/450/depositphotos_79115322-stock-photo-childrens-hands-holding-colorful-candy.jpg" alt="şeker" >
+        <div class="message" id="message">Seni geceye anlatıyorum düş oluyor. <br> Seni Sabaha anlatıyorum umut oluyor. <br>Seni kağıda anlatıyorum şiir oluyor <br>
+            Seni Yüreğime anlatıyorum AŞK oluyor <br>
+            gözlerine baktığımda ,kokunu içine çektiğimde, seni her öptüğümde ,sana her sarıldığım da her elini tuttuğumda bir bayramı yaşıyorum 
+            <br>
+            Benim hayatım sensin 
+            Bayramın mübarek  olsun aşkım!  Nice mutlu,bir ömür sağlıklı bayramlara ❤️❤️❤️❤️❤️<br>Seni Çok seviyorum canım sevgilim <br> <a href="https://www.youtube.com/watch?v=eVOrfTtDS5g" target="_blank"><button style="height: 20px; background-color: bisque;">Müzik</button></a></div>
+        <div class="wrong-message" id="wrong"> Yanlışşş şekeri seçtinnnn <button id="btn">x</button></div>
+    </div>
+
+    <script>
+        document.getElementById("şeker").addEventListener("click", function() {
+            document.getElementById("message").style.display = "block";
+        });
+
+        document.getElementById("normal-şeker").addEventListener("click", function(){
+            document.getElementById("wrong").style.display= "block";
+        })
+
+        document.getElementById("btn").addEventListener("click",function(){
+            document.getElementById("wrong").style.display="none"
+        })
+    </script>
+</body>
+</html>
